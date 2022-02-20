@@ -1,0 +1,14 @@
+#!/bin/bash
+yes | apt-get install terminator
+mkdir /home/kali/.config/terminator
+rm /home/kali/.config/terminator/config
+rm /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+cp termConfig.txt /home/kali/.config/terminator/config
+cp keyConfig.txt /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+yes | apt-get install gobuster
+yes | apt-get install python-pip
+git clone https://github.com/SecureAuthCorp/impacket.git
+git clone https://github.com/dirkjanm/mitm6.git
+python2 -m pip install ./impacket/
+python2 -m pip install ./mitm6/
+reboot
