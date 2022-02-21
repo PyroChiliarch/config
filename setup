@@ -7,6 +7,7 @@ cp termConfig.txt /home/kali/.config/terminator/config
 cp keyConfig.txt /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 curl https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/directory-list-2.3-medium.txt > dirs.txt
 yes | apt-get install gobuster
+yes | apt-get install ncat
 yes | apt-get install python-pip
 git clone https://github.com/SecureAuthCorp/impacket.git
 git clone https://github.com/dirkjanm/mitm6.git
